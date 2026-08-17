@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GenLayer Spinner</title>
+
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #111;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      text-align: center;
+    }
+
+    .spinner {
+      width: 90px;
+      height: 90px;
+      margin: auto;
+      position: relative;
+      animation: rotate 2s linear infinite;
+    }
+
+    .dot {
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      background: white;
+      border-radius: 50%;
+      left: 37px;
+      top: 0;
+      transform-origin: 8px 45px;
+    }
+
+    .dot:nth-child(1) { transform: rotate(0deg); }
+    .dot:nth-child(2) { transform: rotate(45deg); }
+    .dot:nth-child(3) { transform: rotate(90deg); }
+    .dot:nth-child(4) { transform: rotate(135deg); }
+    .dot:nth-child(5) { transform: rotate(180deg); }
+    .dot:nth-child(6) { transform: rotate(225deg); }
+    .dot:nth-child(7) { transform: rotate(270deg); }
+    .dot:nth-child(8) { transform: rotate(315deg); }
+
+    h2 {
+      color: white;
+      margin-top: 25px;
+      font-size: 20px;
+    }
+
+    @keyframes rotate {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="spinner">
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+    </div>
+
+    <h2>GenLayer Spinner</h2>
+  </div>
+
+</body>
+</html>
